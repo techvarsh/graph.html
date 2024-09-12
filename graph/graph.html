@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <style>
+    body{
+     background:linear-gradient(315deg,rgb(216, 211, 211),#d7d7d7);
+     justify-content: center;
+     display: flex;
+     align-items: center;
+     height: 100vh;
+
+}
+#mychart{
+    width: 100%;
+    max-width: 650px;
+}
+
+    </style>
+<body>
+    <canvas id="mychart"></canvas>
+    <script>
+        const age=[25,26,27,28,29,30,31];
+        new Chart("mychart",{
+            type:"line",
+            data:{
+                labels:age,
+                datasets:[
+                    {
+                        label:"expanses",
+                        data:[2300,3000,40000,54000,60400,71200],
+                        borderColor:"yellow",
+                        fill:false,
+                        lineTension:0.4,
+                        pointRadius:4,
+                    },
+                    {
+                        label:"income",
+                        data:[3000,4000,50000,60000,70000,81200],
+                        borderColor:"blue",
+                        fill:false,
+                        lineTension:0.4,
+                        pointRadius:4,
+                    }
+                ]
+            },
+            Option:{
+                legend:{display:false}
+        },
+        });
+    </script>
+</body>
+</html>
